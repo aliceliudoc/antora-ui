@@ -1,0 +1,147 @@
+footer.footer {
+  background-color: var(--footer-background);
+  color: var(--footer-font-color);
+  font-size: calc(14 / var(--rem-base) * 1rem);
+  line-height: var(--footer-line-height);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--footer-link-font-color);
+}
+
+.footer img {
+  vertical-align: middle;
+}
+
+.footer p + p {
+  margin-top: 1em;
+}
+
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.footer-brand .logo {
+  display: flex;
+}
+
+.footer-brand a {
+  color: var(--footer-link-font-color);
+}
+
+.footer-brand figcaption {
+  color: var(--footer-link-font-color);
+  font-family: "Comfortaa", sans-serif;
+  font-size: calc(36 / var(--rem-base) * 1rem);
+  line-height: 1;
+  position: relative;
+  top: 0.06em; /* compensate for built-in line height in font */
+  letter-spacing: -0.02em;
+}
+
+.footer-brand .logo + figcaption {
+  margin-left: 1rem;
+}
+
+.footer-brand img {
+  height: calc(45 / var(--rem-base) * 1rem);
+}
+
+.footer-brand-links {
+  list-style: none;
+  display: flex;
+  margin: 2rem 0 0;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.footer-brand-links li + li::before {
+  content: '|';
+  padding: 0 0.5em;
+}
+
+.footer-brand-follow {
+  font-size: calc(24 / var(--rem-base) * 1rem);
+  font-weight: var(--body-font-weight-bold);
+  line-height: 1;
+}
+
+.footer p.footer-brand-follow {
+  margin-top: 1.25rem;
+}
+
+.footer-brand-follow .logo {
+  width: calc(28 / var(--rem-base) * 1rem);
+}
+
+.footer-brand-follow .handle {
+  padding: 0 0 0.1em 0.5ch;
+}
+
+.footer-legal {
+  margin-top: 1.5rem;
+}
+
+.footer-legal,
+.footer-thanks {
+  text-align: center;
+}
+
+.footer-thanks .badges {
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-thanks .badges a + a {
+  margin-left: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+  footer.footer {
+    flex-direction: row;
+    position: relative;
+    z-index: var(--z-index-footer);
+  }
+
+  .footer-legal {
+    margin-top: 0;
+    padding: 0 1.5rem;
+    text-align: left;
+    width: 40%;
+  }
+
+  .footer-main,
+  .footer-thanks {
+    width: 30%;
+  }
+
+  .footer-thanks {
+    text-align: right;
+  }
+
+  .footer-thanks .badges {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

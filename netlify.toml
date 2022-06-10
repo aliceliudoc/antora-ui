@@ -1,0 +1,15 @@
+[build]
+publish = "public"
+command = "npx gulp preview:build"
+
+[build.environment]
+CI = "true"
+NODE_VERSION = "16"
+
+[context.deploy-preview]
+command = "npx gulp preview:build && npx gulp --series build bundle:pack"
+
+[[headers]]
+for = "/_/font/*"
+  [headers.values]
+  Cache-Control = "public,max-age=604800"

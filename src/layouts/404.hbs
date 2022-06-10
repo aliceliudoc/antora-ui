@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+{{> head defaultPageTitle='Page Not Found'}}
+  </head>
+  <body class="status-404">
+{{> header}}
+{{> body componentOrder=(lookup (lookup (lookup (siteStartPage) 'asciidoc') 'attributes') 'page-component-order')}}
+{{> footer}}
+  </body>
+</html>
